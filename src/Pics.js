@@ -95,13 +95,19 @@ function Pics(){
                   cld.image('samples/petizo/2'),
                   cld.image('samples/petizo/3'),
                   cld.image('samples/petizo/4'),
-                  cld.image('samples/petizo/5')
+                  cld.image('samples/petizo/5'),
+                  cld.image('samples/petizo/6'),
+                  cld.image('samples/petizo/7'),
+                  cld.image('samples/petizo/8'),
+                  cld.image('samples/petizo/9'),
+                  cld.image('samples/petizo/10')
+
               ];
   
-              await Promise.all(images.map(image => image.resize(fill().width(250).height(250))));
+              await Promise.all(images.map(image => image.resize(fill().width(300).height(300))));
   
               const components = images.map((image, index) => (
-                  <div key={index} className="py-5 shadow-2xl hover:shadow-lg rounded-2xl ">
+                  <div key={index} className=" shadow-2xl hover:shadow-lg rounded-2xl ">
                       <AdvancedImage className="rounded-full" cldImg={image} />
                   </div>
               ));
@@ -127,9 +133,25 @@ function Pics(){
           swipeToSlide: true, // Enable swipe to slide
           arrows: true, // Display arrow navigation
           centerMode: true, // Enable center mode
-          centerPadding: "38%", // Adjust the padding to center the images
+          centerPadding: "10%", // Adjust the padding to center the images
           autoplay: true, // Enable auto scroll
           autoplaySpeed: 1000, // Set auto scroll speed in milliseconds
+          responsive: [
+            {
+              breakpoint: 768, // Apply settings for screens smaller than 768px
+              settings: {
+                slidesToShow: 1,
+                centerPadding: "25%",
+              }
+            },
+            {
+              breakpoint: 1024, // Apply settings for screens smaller than 1024px
+              settings: {
+                slidesToShow: 2,
+                centerPadding: "15%",
+              }
+            }
+          ]
       };
   
       return (

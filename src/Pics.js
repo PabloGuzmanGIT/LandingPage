@@ -100,14 +100,17 @@ function Pics(){
                   cld.image('samples/petizo/7'),
                   cld.image('samples/petizo/8'),
                   cld.image('samples/petizo/9'),
-                  cld.image('samples/petizo/10')
+                  cld.image('samples/petizo/10'),
+                  cld.image('samples/petizo/11'),
+                  cld.image('samples/petizo/12'),
+                  cld.image('samples/petizo/13')
 
               ];
   
               await Promise.all(images.map(image => image.resize(fill().width(300).height(300))));
   
               const components = images.map((image, index) => (
-                  <div key={index} className=" shadow-2xl hover:shadow-lg rounded-2xl ">
+                  <div key={index} className=" py-10 shadow-2xl hover:shadow-lg rounded-2xl transform motion-safe:hover:scale-150">
                       <AdvancedImage className="rounded-full" cldImg={image} />
                   </div>
               ));
@@ -127,13 +130,13 @@ function Pics(){
           dots: true,
           infinite: true,
           speed: 1000,
-          slidesToShow: 3, // Display 3 slides at once
+          slidesToShow: 5, // Display 3 slides at once
          
           slidesToScroll: 1,
           swipeToSlide: true, // Enable swipe to slide
           arrows: true, // Display arrow navigation
           centerMode: true, // Enable center mode
-          centerPadding: "10%", // Adjust the padding to center the images
+          centerPadding: "1%", // Adjust the padding to center the images
           autoplay: true, // Enable auto scroll
           autoplaySpeed: 1000, // Set auto scroll speed in milliseconds
           responsive: [

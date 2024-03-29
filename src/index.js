@@ -13,7 +13,7 @@ root.render(
     <div 
           className="bg-fixed "
           style={{
-            backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),url(https://wallpapercave.com/wp/wp8679390.jpg)',
+            backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),url(https://res.cloudinary.com/peruviansoftwaresolutions/image/upload/v1711730113/samples/petizo/wallpaper.jpg)',
             //height: '100vh', // Set height to 100% of the viewport height
             backgroundSize: '100% auto', // Make the background image fit within the container without stretching or cropping
             backgroundRepeat: 'no-repeat', // Prevent the background image from repeating

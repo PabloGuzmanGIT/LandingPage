@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Pics from './Pics';
 import Invite from './Invite';
+import FlightPlan from './FlightPlan';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -28,7 +29,9 @@ root.render(
     <Invite/>
     
     
+    
     </div>
+    <FlightPlan/>
 
 
   </React.StrictMode>
